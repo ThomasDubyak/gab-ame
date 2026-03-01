@@ -1,10 +1,12 @@
 
 :root {
     --background-color: #90553c;
-    --background-light: #d8b5a8;
+    --background-light: rgba(216, 181, 168, 0.4);
     --color-one: #482e1d;
     --color-two: #f2f2f2;
     --border-color: #534f80;
+    --border-gradient-outer: rgba(144, 115, 188, 0.4);
+    --border-gradient-inner: rgba(254, 219, 255, 0.7);
 }
 
 body, html {
@@ -53,7 +55,7 @@ a {
 
 .border{
     content:"";
-    background: -webkit-linear-gradient(left, rgb(181, 85, 43) 0%, rgb(149, 87, 44) 12%, rgb(228, 147, 76) 47%, rgb(115, 70, 17) 100%);
+    background: linear-gradient(.25turn, var(--border-gradient-outer), 10%, var(--border-gradient-inner), var(--border-gradient-outer));
     box-sizing:inherit;
     height:2px;
     width: 100%;
@@ -64,7 +66,7 @@ a {
 
 .border-small{
     content:"";
-    background: -webkit-linear-gradient(left, rgb(181, 85, 43) 0%, rgb(149, 87, 44) 12%, rgb(228, 147, 76) 47%, rgb(115, 70, 17) 100%);
+    background: linear-gradient(.25turn, rgba(255, 255, 255, .15), 10%, rgba(255, 255, 255, .9), rgba(255, 255, 255, .15));
     box-sizing:inherit;
     height:2px;
     width: 100%;
@@ -323,8 +325,12 @@ p.footer {
     font-weight: 200;
     text-align: left;
     padding: .9em;
-    border-radius: 1em;
     background-color: var(--background-light);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 2px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
 }
 
 .citypic{
