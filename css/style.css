@@ -1,7 +1,8 @@
 
 :root {
-    --background-color: #dfb692;
-    --color-one: #6c7755;
+    --background-color: #90553c;
+    --background-light: #d8b5a8;
+    --color-one: #482e1d;
     --color-two: #f2f2f2;
     --border-color: #534f80;
 }
@@ -323,7 +324,7 @@ p.footer {
     text-align: left;
     padding: .9em;
     border-radius: 1em;
-    background-color: var(--background-color);
+    background-color: var(--background-light);
 }
 
 .citypic{
@@ -455,7 +456,7 @@ p.footer {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 300;
-    font-size: clamp(42px, 6vw, 72px);
+    font-size: clamp(42px, 10vw, 72px);
     color: rgba(255, 255, 255, 0.95);
     text-shadow: 0 1px 20px rgba(180,130,60,0.4), 0 0 60px rgba(255,255,255,0.15);
     letter-spacing: 0.04em;
@@ -469,8 +470,8 @@ p.footer {
 }
 .and-word {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    font-size: 9px;
+    font-weight: 600;
+    font-size: clamp(6px, 6vw, 12px);
     letter-spacing: 0.45em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.7);
@@ -484,8 +485,8 @@ p.footer {
 }
 .tagline {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    font-size: 9px;
+    font-weight: 600;
+    font-size: clamp(6px, 6vw, 12px);
     letter-spacing: 0.55em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.55);
@@ -493,8 +494,8 @@ p.footer {
 }
 
 .banner.glass {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255,255,255,0.25);
     border-radius: 2px;
