@@ -1,12 +1,13 @@
 
 :root {
-    --background-color: #90553c;
+    --background-color: rgba(144, 85, 60, 0.9);
     --background-light: rgba(216, 181, 168, 0.4);
     --color-one: #482e1d;
     --color-two: #f2f2f2;
     --border-color: #534f80;
     --border-gradient-outer: rgba(144, 115, 188, 0.4);
     --border-gradient-inner: rgba(254, 219, 255, 0.7);
+    --glass-box-bg: rgba(255, 255, 255, 0.3);
 }
 
 body, html {
@@ -76,8 +77,6 @@ a {
     bottom: 0;
 }
 
-
-
 /* Container Styles */
 .jarallax-wrapper-tall {
     min-height:100vh;
@@ -94,13 +93,13 @@ a {
 .jarallax {
     position:relative;
     z-index:0;
-    opacity:0.9;
+    opacity:0.95;
     width:100%;
 }
 
 .jarallax > .jarallax-img {
     position:absolute;
-    object-fit: cover;
+    object-fit: contain;
 
     top:0;
     left:0;
@@ -325,9 +324,9 @@ p.footer {
     font-weight: 200;
     text-align: left;
     padding: .9em;
-    background-color: var(--background-light);
+    background: var(--glass-box-bg);
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255,255,255,0.25);
     border-radius: 2px;
     box-shadow: 0 8px 40px rgba(0,0,0,0.12);
@@ -358,22 +357,16 @@ p.footer {
     grid-area: 4 / 1 / 5 / 6;
 }
 
-.background-image--SanFrancisco {
-    background-image: url("../img/sf.jpg");
+.background-image--SantaFe {
+    background-image: url("../img/santefe.jpg");
     background-size: cover;
     background-position: center;
 }
 
-.background-image--SanJose {
-    background-image: url("../img/sj.jpg");
-    background-size: cover;
-    background-position: center bottom;
-}
-
 .background-image--maps {
-    background-image: url("../img/maps.jpg");
+    background-image: url("../img/map.png");
     opacity: 75%;
-    background-position: center top;
+    background-position: center 45%;
     min-height: 10vh;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -390,7 +383,7 @@ p.footer {
 }
 
 .background-image--cabins {
-    background-image: url("../img/cabin2.jpg");
+    background-image: url("../img/santa-fe-2.jpg");
     opacity: 75%;
     background-size: cover;
     background-position: 50% 75%;
@@ -621,11 +614,6 @@ p.footer {
         background-image: url("../img/sf.jpg");
         background-size: cover;
         background-position: center;
-    }
-
-    .background-image--SanJose {
-        background-image: url("../img/sj.jpg");
-        background-size: cover;
     }
 
     img.icon{
